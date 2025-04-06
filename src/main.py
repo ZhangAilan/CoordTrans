@@ -19,9 +19,9 @@ if __name__ == '__main__':
     app = QApplication(sys.argv)
     
     # 设置应用程序图标
-    icon_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'assets', 'logo.png')
-    app.setWindowIcon(QIcon(icon_path))
-    
+    icon_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'assets', 'logo.ico')
+    if os.path.exists(icon_path):
+        app.setWindowIcon(QIcon(icon_path))
     window = MainWindow()
     window.show()
     sys.exit(app.exec_())
