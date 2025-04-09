@@ -582,10 +582,7 @@ class TransformPage(QWidget):
                             b, l, h = Beijing54_XYZ2BLH(xyz[0], xyz[1], xyz[2])
                         
                         # 弧度转换为度
-                        if self.target_unit_degree.isChecked():
-                            result_x, result_y, result_z = np.degrees(b), np.degrees(l), h
-                        else:
-                            result_x, result_y, result_z = b, l, h
+                        result_x, result_y, result_z = np.degrees(b), np.degrees(l), h
                             
                     elif "平面坐标" in target_coord_type:
                         # 转换为大地坐标
@@ -637,10 +634,7 @@ class TransformPage(QWidget):
                             b, l, h = Beijing54_XYZ2BLH(xyz[0], xyz[1], xyz[2])
                         
                         # 弧度转换为度
-                        if self.target_unit_degree.isChecked():
-                            result_x, result_y, result_z = np.degrees(b), np.degrees(l), h
-                        else:
-                            result_x, result_y, result_z = b, l, h
+                        result_x, result_y, result_z = np.degrees(b), np.degrees(l), h
                             
                     elif "平面坐标" in target_coord_type:
                         # 转换为大地坐标
